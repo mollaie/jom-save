@@ -1,0 +1,22 @@
+{
+  "name": "jom-save",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/Api",
+      "proxyUrl": "http://p-stage.jomsave.com",
+      "changeOrigin": true,
+      "secure": false,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/Api": "http://p-stage.jomsave.com",
+        "http://localhost":"http://p-stage.jomsave.com"
+      }
+    }
+  ],
+  "proxy": "http://p-stage.jomsave.com"
+
+}

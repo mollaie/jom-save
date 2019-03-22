@@ -1,0 +1,69 @@
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <div class="home-userinfo-container">
+                    <p>Member</p>
+                    <span>{{Model.DisplayName}}</span>
+                </div>
+            </ion-col>
+            <ion-col size="6" class="text-center" style="padding-left:20px">
+                <div class="picture-container text-center">
+                    <img [src]="dataTransaction.ProfileImage" width=150 height=150 />
+                </div>
+            </ion-col>
+            <ion-col size="3">
+                <div>
+                    <img src="../../assets/images/photo-camera.svg" style="width:25px;margin-top: 60%;"
+                        (click)="presentActionSheet()" />
+                </div>
+                <div class="home-qrcode-container">
+                    <ngx-qrcode [qrc-value]="encodeData" class="text-center"></ngx-qrcode>
+                    <p>{{MemberId}}</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <br />
+        <br />
+        <ion-row>
+            <ion-col size="4" class="text-center">
+                <img src='../../assets/images/btn-settings.svg' style="max-width:30%" (click)="Setting()"/>
+                <p>Settings</p>
+            </ion-col>
+            <ion-col size="4" class="text-center">
+                <img src='../../assets/images/btn-feedback.svg' style="max-width:30%" (click)="Feedback()"/>
+                <p>Feedback</p>
+            </ion-col>
+            <ion-col size="4" class="text-center">
+                <img src='../../assets/images/btn-complaints.svg' style="max-width:30%" (click)="Complaints()"/>
+                <p>Complaints</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center" (click)="VisitUs()">
+                <img src='../../assets/images/btn-visit-us.svg' style="max-width:10%" />
+                <p>Visit Us</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="About()">About JomSave</a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="Terms()">Terms of Use</a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="Policy()">Privacy & Policy</a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="logOutConfirmation()">Logout</a>                
+            </ion-col>            
+        </ion-row>
+    </ion-grid>
+</ion-content>

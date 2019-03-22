@@ -1,0 +1,9 @@
+{
+  "/Api": {
+    "target": "http://p-stage.jomsave.com/Api",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {"^/Api" : "http://p-stage.jomsave.com"}
+   }
+}

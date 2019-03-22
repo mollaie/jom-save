@@ -1,0 +1,42 @@
+<ion-header no-border class="wallet-header">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="text-center">
+                <p class="wallet-header-p">A-Wallet</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <p class="wallet-header-life-earning">Life Earning</p>
+                <p class="wallet-header-life-earning-value">RM{{Wallet.LifeTimeEarning }}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-header>
+<ion-content padding>
+    <div class="wallet-body-item">
+        <ion-grid>
+            <ion-row>
+                <ion-col class="text-center">
+                    <p class="wallet-body-amount">Amount <ion-icon name="help-circle-outline" (click)="doShowMessage()"></ion-icon>
+                    </p>
+                    <p class="wallet-body-life-earning-value">RM{{Wallet.CurrentBalance }}</p>
+                    <button class="wallet-body-withdraw">Withdraw</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <ion-grid style="position: absolute;bottom: 0;text-align: center;width: 100%;">
+
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="doWalletHistory()">Wallet History</a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="text-center">
+                <a (click)="doMyNetwork()">View My Network</a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

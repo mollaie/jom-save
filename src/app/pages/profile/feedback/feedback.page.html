@@ -1,0 +1,44 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title class="text-center">Feedback</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="content">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <input type="text" class="input" placeholder="Title" [(ngModel)]="Model.Title" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <textarea rows="10" [(ngModel)]="Model.Body" placeholder="Description"></textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button class="emoji-button angry" (click)="doChangeSatisfy(1)"></button>
+          <button class="emoji-button sad" (click)="doChangeSatisfy(2)"></button>
+          <button class="emoji-button happy" (click)="doChangeSatisfy(3)"></button>
+          <button class="emoji-button love" (click)="doChangeSatisfy(4)"></button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="text-center" style="font-weight: bold;font-size:16px;">{{Satisfy}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="next-button" (click)="doNext()">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

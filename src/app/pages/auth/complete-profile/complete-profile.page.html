@@ -1,0 +1,97 @@
+<ion-content  class="none-background">
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="logo"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-toolbar no-border-top class="toolbar">
+            <ion-segment  [(ngModel)]="Navbar">
+              <ion-segment-button value="Personal" (click)="doPersonal()">
+                Personal
+              </ion-segment-button>
+              <ion-segment-button value="Bussines" (click)="doBussines()">
+                Business
+              </ion-segment-button>
+
+            </ion-segment>
+          </ion-toolbar>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"></ion-col>
+        <ion-col size="6" class="text-center" style="padding-left:20px">
+          <div class="picture-container text-center">
+            <img src={{Model.ProfileImage}} width=150 height=150/>
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <div>
+            <img src="../../assets/images/photo-camera.svg" style="width:25px;margin-top: 60%;"
+              (click)="presentActionSheet()" />
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+          <img  *ngIf="Navbar =='Personal'" src="../../assets/images/icon-fullname.svg" />
+          <img  *ngIf="Navbar !='Personal'" src="../../assets/images/icon-bank.svg" />
+        </ion-col>
+        <ion-col size="8">
+          <input type="text" class="forgot-password-input" [(ngModel)]="Model.FullName" />
+          <span class="forgot-password-span" *ngIf="Navbar =='Personal'" >Full Name</span>
+          <span class="forgot-password-span" *ngIf="Navbar !='Personal'" >Business Registration name</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+          <img src="../../assets/images/icon-dispaly-name.svg" />
+        </ion-col>
+        <ion-col size="8">
+          <input type="text" class="forgot-password-input" [(ngModel)]="Model.DisplayName" />
+          <span class="forgot-password-span">Display Name</span>
+        </ion-col>
+      </ion-row>
+      <ion-radio-group *ngIf="Navbar =='Personal'" [(ngModel)]="Model.Gender">
+        <ion-row>
+          <ion-col size="4">
+            <ion-item no-lines lines="none">
+              <ion-label>Male</ion-label>
+              <ion-radio color="danger" item-left value="Male" checked></ion-radio>
+            </ion-item>
+          </ion-col>
+
+          <ion-col  size="4">
+            <ion-item no-lines lines="none">
+              <ion-label>Female</ion-label>
+              <ion-radio color="danger" item-left value="Female" ></ion-radio>
+            </ion-item>
+          </ion-col>
+
+          <ion-col  size="4">
+            <ion-item no-lines lines="none">
+              <ion-label>Others</ion-label>
+              <ion-radio color="danger" item-left value="Other" ></ion-radio>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+      </ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <ion-label color="danger" *ngIf="ErrorMessage != ''">{{ErrorMessage}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="next-button" (click)="doNext()">
+          <ion-icon name="arrow-forward"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>

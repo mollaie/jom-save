@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <a slot="end">
+        <ion-icon name="close" (click)="doNext()" style="padding:10px;color:#7D7D7D"></ion-icon>
+      </a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+              <div class="logo"></div>
+            </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col class="email-confirmation">
+          <ion-icon name="checkmark-circle" style="font-size:60px"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="text-center">
+          <span class="text-center">thank you.<br />
+            your email has been verified.</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

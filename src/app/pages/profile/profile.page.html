@@ -1,0 +1,46 @@
+<ion-content>
+    <div *ngIf="showSplash" class="splash">
+        <ion-grid>
+            <ion-row>
+                <ion-col class="text-center">
+                    <img src="../assets/images/jomsave_logo.svg" />
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="text-center">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </div>
+    <ion-tabs *ngIf="!showSplash">
+        <ion-tab-bar slot="bottom" class="tab-bar">
+            <ion-tab-button tab="home" (click)="onOtherPageClick($event)">
+                <ion-icon name="home"></ion-icon>
+                <ion-label>Home</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="deals" (click)="onOtherPageClick($event)">
+                <ion-icon name="star"></ion-icon>
+                <ion-label>Deals</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="wallet" (click)="onOtherPageClick($event)">
+                <ion-icon name="wallet"></ion-icon>
+                <ion-label>Wallet</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="notification" (click)="onOtherPageClick($event)">
+                <ion-icon name="notifications"></ion-icon>
+                <ion-label>Notifications</ion-label>
+            </ion-tab-button>
+            <ion-tab-button tab="menu" (click)="onClick($event)">
+                <ion-icon name="menu"></ion-icon>
+                <ion-label>Menu</ion-label>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
+</ion-content>

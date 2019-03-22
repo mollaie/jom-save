@@ -1,0 +1,100 @@
+<ion-app>
+  <div *ngIf="showSplash" class="splash">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="text-center">
+          <img src="../assets/images/jomsave_logo.svg" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="text-center">
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-content fullscreen style="background-color: #f7931e" *ngIf="showIntro">
+    <ion-slides pager="true" [options]="slideOpts" style="height: 100%">
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="../../assets/images/Onboarding Screening_Asset-01.png" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="text-center">
+              <h3 class="onBoarding-Header">Welcome to JomSave!</h3>
+              <p class="onBoarding-text">Just getting started? <br /> Let's take a look at some of the <br /> greate
+                features of this app!</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="../../assets/images/Onboarding Screening_Asset-02.png" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="text-center">
+              <h3 class="onBoarding-Header2">Geolocation Tracking</h3>
+              <p class="onBoarding-text">Enjoy searching for stores with <br /> Guaranteed Best Deals near you!</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-slide>
+
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="../../assets/images/Onboarding Screening_Asset-03.png" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="text-center">
+              <h3 class="onBoarding-Header2">Unlimited Offers & Guaranteed Best Deals</h3>
+              <p class="onBoarding-text">Unlimited offers and exclusive <br /> deals at your local favorite
+                <br />stores,nationwide!</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-slide>
+
+      <ion-slide>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="../../assets/images/Onboarding Screening_Asset-04.png" />
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="text-center">
+              <h3 class="onBoarding-Header2">Referral Incentive</h3>
+              <p class="onBoarding-text">Enjoy extraordinary referral incentive <br />and lifetime recurring income when
+                you<br /> share JomSave</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-button class="custom-button" (click)="doStart()">Start App</ion-button>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
+  <ion-router-outlet *ngIf="!showIntro"></ion-router-outlet>
+</ion-app>

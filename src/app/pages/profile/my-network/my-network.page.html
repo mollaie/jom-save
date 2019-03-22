@@ -1,0 +1,41 @@
+<ion-header no-border class="wallet-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" class="show-back-button"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+        <p class="wallet-header-p" style="margin-left:25%">A-Wallet</p>
+    </ion-title>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="text-center">
+        <p class="wallet-header-life-earning">Lifetime Earnings</p>
+        <p class="wallet-header-life-earning-value">RM{{LifeTimeEarning }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list padding>
+    <ion-list-header style="padding:0">
+      <div class="network-button network-button-active" id="level1" (click)="segmentChanged($event)" data-level="1">
+        <span>{{Level.Level1Count}}</span>
+        <p>Level 1</p>
+      </div>
+      <div class="network-button" id="level2" (click)="segmentChanged($event)" data-level="2">
+        <span>{{Level.Level2Count}}</span>
+        <p>Level 2</p>
+      </div>
+      <div class="network-button" id="level3" (click)="segmentChanged($event)" data-level="3">
+        <span>{{Level.Level3Count}}</span>
+        <p>Level 3</p>
+      </div>
+
+    </ion-list-header>
+    <ion-item *ngFor="let item of Downlines" class="network-item" lines="none">
+      <p class="network-item-title">{{item.DisplayName}}</p>
+      <p class="network-item-date">Joined since: {{item.JoinDateTime | date:"dd MMM yyyy"}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

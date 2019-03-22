@@ -1,0 +1,81 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-cszbar": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-secure-storage": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-themeablebrowser": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-uniquedeviceid": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.a2a.jomsave.malaysia"
+    }
+  }
+}

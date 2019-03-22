@@ -1,0 +1,74 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+      <ion-title class="text-center">Bank Information</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="account-info">
+          <img src='../../assets/images/icon-fullname.svg' />
+          <input type="text" [(ngModel)]="Model.AccountHolderName" />
+          <span>Fullname / Company Name</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="account-info">
+          <img src='../../assets/images/icon-ID.svg' />
+          <select [(ngModel)]="Model.IdentityType" >
+            <option value="NewIc">New Ic</option>
+            <option value="Passport">Passport</option>
+            <option value="Business Registration Number">Business Registration Number</option>
+          </select>
+          <br />
+          <br />
+          <input type="text" [(ngModel)]="Model.IdentityNo" />
+        </div>
+      </ion-col>
+    </ion-row>
+    <br />
+    <ion-row>
+      <ion-col>
+        <div class="account-info">
+          <img src='../../assets/images/icon-bank.svg' />
+          <select [(ngModel)]="Model.BankId">
+            <option *ngFor="let item of BankList" value={{item.Id}}>{{item.Name}}</option>
+          </select>
+          <br />
+          <br />
+          <input type="text" [(ngModel)]="Model.BankName" />
+          <br />
+          <br />
+        </div>
+      </ion-col>
+    </ion-row>
+    <br />
+    <ion-row>
+      <ion-col>
+        <div class="account-info">
+          <img src='../../assets/images/icon-bank-account.svg' />
+          <input type="text" [(ngModel)]="Model.AccountNo" />
+          <span>Bank Account Number</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <br/>
+    <ion-row>
+      <ion-col class="text-center">
+        <a (click)="uploadStatement()">Upload Statement</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="next-button" (click)="doNext()">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

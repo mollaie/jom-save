@@ -1,0 +1,61 @@
+
+
+<ion-content class="no-scroll content-background ">
+  <div class="container m-t-50">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="logo"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row id="sendemail" *ngIf="!isUserHold" >
+          <ion-col size="1"></ion-col>
+        <ion-col size="2">
+          <img src="../../assets/images/icon-email.svg" />
+        </ion-col>
+        <ion-col size="7">
+          <input type="text" class="forgot-password-input" [(ngModel)]="Model.MailConfirmation" />
+          <span class="forgot-password-span">Please key in your email for <br /> verification purpose</span>
+          <span color="danger" *ngIf="ErrorMessage != ''" >{{ErrorMessage}}</span>
+        </ion-col>
+        <ion-col size="2"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="modal-container" *ngIf="isUserHold">
+      <div class="modal">
+          <div class="modal-header-warning">
+              <ion-icon name="information-circle-outline"></ion-icon>
+          </div>
+          <div class="modal-body">
+            <p>Please check your email to verify.</p>
+            <p style="color:#bdbdbd;text-align: center;font-weight: bold">{{BlockDurationText}}</p>
+          </div>
+          <!-- <div class="modal-footer">
+            <a style="float: right;" (click)="doVerifyEmail()">Continue</a>
+          </div> -->
+      </div>
+  </div>
+
+  <div class="modal-container" *ngIf="isUserConfirmed">
+      <div class="modal">
+          <div class="modal-header-sucess">
+              <ion-icon name="information-circle-outline"></ion-icon>
+          </div>
+          <div class="modal-body">
+            <p>A verification will be send to</p>
+            <p>{{Model.MailConfirmation}}</p>
+          </div>
+          <div class="modal-footer">
+            <a style="float: right;" (click)="doNext()">OK</a>
+            <a style="float: left;" (click)="doCancel()">Cancel</a>
+          </div>
+      </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="next-button" (click)="doNext()">
+          <ion-icon name="arrow-forward"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>

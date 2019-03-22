@@ -1,0 +1,48 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-center">Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p class="profile-setting">Profile Setting</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="setting-button" (click)="AccountInformation()">
+          <img src="../../assets/images/icon-account-info.svg" />
+          <p>Account Information</p>
+        </div>
+
+        <div class="setting-button" (click)="ChangePassword()">
+          <img src="../../assets/images/icon-change-login-password.svg" />
+          <p>Change Login Password</p>
+        </div>
+
+        <div class="setting-button" (click)="ChangeNumber()">
+          <img src="../../assets/images/icon-smart-phone.svg" />
+          <p>Change Mobile Number</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="profile-setting">Payment Settings</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="setting-button" (click)="BankInformation()">
+          <img src="../../assets/images/icon-bank-info.svg" />
+          <p>Bank Information</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

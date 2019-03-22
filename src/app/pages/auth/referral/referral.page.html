@@ -1,0 +1,66 @@
+<ion-header no-border>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="logo"></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3 class="warningMessage">Who is your Referral?</h3>
+          <p class="text-center">Please key in your referral’s Member ID</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"></ion-col>
+        <ion-col size="7">
+          <div class="member-input-container">
+            <input type="text" class="input-icon member-id-input" [(ngModel)]="Model.Referral" (input)="doGetUserInfo()"
+              maxlength="6" (keydown)="doCheckValue($event)" />
+            <img src="../../assets/images/btn-scan-qr.svg" class="member-input--icon" (click)="doScanCode()" />
+            <span class="input-content"></span>
+          </div>
+        </ion-col>
+        <ion-col size="2"></ion-col>
+      </ion-row>
+      <ion-row *ngIf="UserInfo.UserId >0">
+        <ion-col size="3"></ion-col>
+        <ion-col size="6">
+          <div class="picture-container text-center">
+            <img [src]="UserInfo.Photo"/>
+          </div>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+        <ion-col size="12">
+          <p class="text-center">Member</p>
+          <h5 class="text-center">{{UserInfo.DisplayName}}</h5>
+          <p class="text-center">Please confirm the referral information</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="text-center" color="danger" *ngIf="ErrorMessage != ''">{{ErrorMessage}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="text-center">
+          <a class="text-center" (click)="doSkip()">Skip For Now</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="next-button" (click)="doNext()">
+          <ion-icon name="arrow-forward"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>
