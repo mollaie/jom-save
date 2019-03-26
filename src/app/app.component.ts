@@ -56,7 +56,7 @@ export class AppComponent {
       this.statusBar.backgroundColorByHexString('#fbb333');
       this.splashScreen.hide();
 
-      if (this.platform.is('cordova')) this.notificationSetup();
+      //if (this.platform.is('cordova')) this.notificationSetup();
       timer(1500).subscribe(() => this.showSplash = false);
 
       this.data.GetOnBoard().then(

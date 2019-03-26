@@ -49,11 +49,12 @@ export class ChangePasswordPage implements OnInit {
 
     if (!this.isDebug) {
       if (this.Model.NewPassword != this.Model.ConfirmPassword) {
-        this.ErrorMessage = "The entered password and confirmation are equal.<br/> please check your entered values.";
+        this.alert.presentToast("The entered password and confirmation are equal.please check your entered values.");
         return;
       }
       if (this.Model.Password == '') {
-        this.ErrorMessage = "The system can not detect your corrent password. <br/> please log out and login again."
+
+        this.alert.presentToast("The system can not detect your corrent password. please log out and login again.");
         return;
       }
       this.api.ChangePassword(this.Model.Password, this.Model.NewPassword, this.AccessToken)
@@ -93,12 +94,12 @@ export class ChangePasswordPage implements OnInit {
     this.ErrorMessage = "";
 
     if (this.Model.NewPassword.length < 8) {
-      this.ErrorMessage = "Your password's length must be at least 8.";
+      this.alert.presentToast("Your password's length must be at least 8.");
       return false;
     }
 
     if (this.Model.NewPassword.includes(this.Model.Phone)) {
-      this.ErrorMessage = "Password could not be a part of your phone number";
+      this.alert.presentToast("Password could not be a part of your phone number");
       return false;
     }
 

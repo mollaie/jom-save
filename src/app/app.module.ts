@@ -28,8 +28,8 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 //Firebase 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { Firebase } from '@ionic-native/firebase/ngx';
-import { FirebaseCloudMessagingService } from './services/firebase/firebase-cloud-messaging.service';
+// import { Firebase } from '@ionic-native/firebase/ngx';
+// import { FirebaseCloudMessagingService } from './services/firebase/firebase-cloud-messaging.service';
 
 //Secure Storage
 
@@ -59,8 +59,8 @@ const config = {
     StatusBar,
     ZBar,
     ThemeableBrowser,
-    Firebase,
-    FirebaseCloudMessagingService,
+    // Firebase,
+    // FirebaseCloudMessagingService,
     SplashScreen,
     FileTransfer,
     SocialSharing,

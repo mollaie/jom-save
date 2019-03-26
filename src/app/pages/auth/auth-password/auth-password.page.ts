@@ -50,6 +50,8 @@ export class AuthPasswordPage implements OnInit {
   ngOnInit() {
     if (this.Model.Phone == '' || this.dataTransaction.Phone == '') {
       this.router.navigate(['auth-phone']);
+    }else{
+      this.dataTransaction.setUserPhone(this.Model.Phone);
     }
   }
 

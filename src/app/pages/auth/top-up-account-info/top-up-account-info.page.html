@@ -37,18 +37,20 @@
               <input type="tel" placeholder="Card number" [(ngModel)]="Model.CreditCard" class="creditcard-input" maxlength="16" (keydown)="doOnKeyDown($event)" (change)="doDetermineCard()"/>            
           </ion-col>
           <ion-col size="6" style="padding:0;margin: 0"  class="creditcard-datepicker">
-              <ion-datetime min="2018" max="2030" display-format="MM / YY" picker-format="MMM YYYY" [(ngModel)]="Model.ExpireDate" style="padding-left:25px"></ion-datetime>
+              <ion-datetime min="2018" max="2030" display-format="MM / YY" picker-format="MMM YYYY" [(ngModel)]="Model.ExpireDate" style="padding-left:25px" placeholder="MM/YY"></ion-datetime>
           </ion-col>
           <ion-col size="6" style="padding:0;margin: 0" class="creditcard-cvv">
               <input type="tel" [(ngModel)]="Model.CVV" (keydown)="doOnKeyDown($event)" maxlength="4" placeholder="CVV"/>
           </ion-col>
           <ion-col size="12">
-              <input type="text" [(ngModel)]="Model.Name" class="creditcard-input" placeholder="Name"/>
+              <input type="text" [(ngModel)]="Model.Name" class="creditcard-input" placeholder="Full Name"/>
           </ion-col>
         </ion-row>
     </ion-grid>
+</div>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button class="next-button" (click)="doNext()">
         <ion-icon name="arrow-forward"></ion-icon>
     </ion-fab-button>
-</div>
+</ion-fab>
 </ion-content>

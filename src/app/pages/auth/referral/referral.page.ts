@@ -92,7 +92,7 @@ export class ReferralPage implements OnInit {
       return;
     }
 
-    this.presentConfirm(this.UserInfo.DisplayName,this.UserInfo.UserId);
+    this.presentConfirm(this.UserInfo.DisplayName,this.Model.Referral);
     
   }
 

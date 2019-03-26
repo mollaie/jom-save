@@ -75,10 +75,16 @@ export class AuthPhonePage implements OnInit {
   }
 
   async doNext() {
-    if (this.Model.Phone == '' || this.Model.Phone.length < 10) {
+    if (this.Model.Phone == '') {
       this.alert.presentToast('Please fill in the mobile number.');
       return false;
     }
+
+    if(this.Model.Phone.length < 10){
+      this.alert.presentToast('Mobile numbe cannot be lesser than 10 digits.');
+      return false;
+    }
+
     if (!this.isDebug) {
       this.api.IsMobileRgistered(`${this.Model.Phone}`)
         .then(response => {
@@ -114,10 +120,6 @@ export class AuthPhonePage implements OnInit {
           }
         })
     }
-
-  }
-
-  doForgotPassword() {
 
   }
 
